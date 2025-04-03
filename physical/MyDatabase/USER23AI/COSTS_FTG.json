@@ -1,0 +1,70 @@
+{
+  "physicalTable" : {
+    "name" : "COSTS_FTG",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "PROD_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "TIME_ID",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "PROMO_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "CHANNEL_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "UNIT_COST",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "UNIT_PRICE",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "joins" : [ {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.CHANNELS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.COSTS_FTG.CHANNEL_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.CHANNELS_FTG.CHANNEL_ID"
+      } ]
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.PRODUCTS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.COSTS_FTG.PROD_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.PRODUCTS_FTG.PROD_ID"
+      } ]
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.PROMOTIONS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.COSTS_FTG.PROMO_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.PROMOTIONS_FTG.PROMO_ID"
+      } ]
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.TIMES_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.COSTS_FTG.TIME_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.TIMES_FTG.TIME_ID"
+      } ]
+    } ]
+  }
+}

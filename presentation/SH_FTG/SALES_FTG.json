@@ -1,0 +1,46 @@
+{
+  "presentationTable" : {
+    "name" : "SALES_FTG",
+    "presentationColumns" : [ {
+      "name" : "PROD_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.PROD_ID"
+    }, {
+      "name" : "CUST_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.CUST_ID"
+    }, {
+      "name" : "TIME_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.TIME_ID"
+    }, {
+      "name" : "CHANNEL_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.CHANNEL_ID"
+    }, {
+      "name" : "PROMO_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.PROMO_ID"
+    }, {
+      "name" : "QUANTITY_SOLD",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.QUANTITY_SOLD"
+    }, {
+      "name" : "AMOUNT_SOLD",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.AMOUNT_SOLD"
+    }, {
+      "name" : "FECHA_FIN",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.FECHA_FIN"
+    }, {
+      "name" : "FECHA_INI",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.FECHA_INI"
+    }, {
+      "name" : "ffin_fini",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.ffin_fini"
+    }, {
+      "name" : "nfestivos",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.nfestivos"
+    }, {
+      "name" : "nLaborables",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.nLaborables"
+    }, {
+      "name" : "nEval",
+      "description" : "usando funcion de bd",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.SALES_FTG.nEval"
+    } ]
+  }
+}

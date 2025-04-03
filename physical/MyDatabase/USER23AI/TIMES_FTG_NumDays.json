@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "TIMES_FTG_NumDays",
+    "sourceTable" : "physicalTable:MyDatabase.USER23AI.TIMES_FTG",
+    "overrideSourceCacheSetting" : false
+  }
+}

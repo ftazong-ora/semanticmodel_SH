@@ -1,0 +1,25 @@
+{
+  "subjectArea" : {
+    "name" : "SH_FTG",
+    "sourceBusinessModel" : "businessModel:SH_FTG",
+    "tableOrder" : [ {
+      "name" : "presentationTable:SH_FTG.CHANNELS_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.COSTS_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.COUNTRIES_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.CUSTOMERS_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.PRODUCTS_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.PROMOTIONS_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.SALES_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.TIMES_FTG"
+    }, {
+      "name" : "presentationTable:SH_FTG.TIMES_FTG_NumDays"
+    } ]
+  }
+}

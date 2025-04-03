@@ -1,0 +1,111 @@
+{
+  "physicalTable" : {
+    "name" : "SALES_FTG",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "PROD_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "CUST_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "TIME_ID",
+      "dataType" : "DATETIME",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "CHANNEL_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "PROMO_ID",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "QUANTITY_SOLD",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "AMOUNT_SOLD",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : false
+    }, {
+      "name" : "FECHA_INI",
+      "dataType" : "TIMESTAMP",
+      "length" : 0,
+      "nullable" : true
+    }, {
+      "name" : "FECHA_FIN",
+      "dataType" : "TIMESTAMP",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "joins" : [ {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.CHANNELS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.SALES_FTG.CHANNEL_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.CHANNELS_FTG.CHANNEL_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.CUSTOMERS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.SALES_FTG.CUST_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.CUSTOMERS_FTG.CUST_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.PRODUCTS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.SALES_FTG.PROD_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.PRODUCTS_FTG.PROD_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.PROMOTIONS_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.SALES_FTG.PROMO_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.PROMOTIONS_FTG.PROMO_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.TIMES_FTG",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.USER23AI.SALES_FTG.TIME_ID",
+        "rightColumn" : "physicalColumn:MyDatabase.USER23AI.TIMES_FTG.TIME_ID"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.USER23AI.TIMES_FTG_NumDays",
+      "useJoinExpression" : true,
+      "joinExpression" : {
+        "expressionTemplate" : "%1 between %2 and CURRENT_DATE",
+        "expressionObjects" : [ "physicalColumn:MyDatabase.USER23AI.TIMES_FTG_NumDays.TIME_ID", "physicalColumn:MyDatabase.USER23AI.SALES_FTG.TIME_ID" ]
+      },
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

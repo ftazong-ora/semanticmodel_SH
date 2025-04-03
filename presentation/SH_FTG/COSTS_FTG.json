@@ -1,0 +1,24 @@
+{
+  "presentationTable" : {
+    "name" : "COSTS_FTG",
+    "presentationColumns" : [ {
+      "name" : "PROD_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.COSTS_FTG.PROD_ID"
+    }, {
+      "name" : "TIME_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.COSTS_FTG.TIME_ID"
+    }, {
+      "name" : "PROMO_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.COSTS_FTG.PROMO_ID"
+    }, {
+      "name" : "CHANNEL_ID",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.COSTS_FTG.CHANNEL_ID"
+    }, {
+      "name" : "UNIT_COST",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.COSTS_FTG.UNIT_COST"
+    }, {
+      "name" : "UNIT_PRICE",
+      "sourceLogicalColumn" : "logicalColumn:SH_FTG.COSTS_FTG.UNIT_PRICE"
+    } ]
+  }
+}
