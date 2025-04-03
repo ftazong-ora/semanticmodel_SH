@@ -168,7 +168,7 @@
       "logicalColumnSource" : {
         "derivedFrom" : "LOGICAL_COLUMNS",
         "logicalExpression" : {
-          "expressionTemplate" : "EVALUATE('f_days(\\%1.\"logicalColumn\":\"SH_FTG\".\"SALES_FTG\".\"FECHA_INI\"\\%22.\"logicalColumn\":\"SH_FTG\".\"SALES_FTG\".\"FECHA_FIN\" )' as int)"
+          "expressionTemplate" : "EVALUATE('f_days(\\%1.\"logicalColumn\":\"SH_FTG\".\"SALES_FTG\".\"FECHA_INI\",\\%2.\"logicalColumn\":\"SH_FTG\".\"SALES_FTG\".\"FECHA_FIN\" )' as int)"
         }
       }
     } ],
